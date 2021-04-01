@@ -108,6 +108,17 @@ modules:
                         - { value: 7, descr: 'RAID-60', graph: 1, generic: 0 }
                         - { value: 8, descr: 'RAID-50', graph: 0, generic: 0 }
                 -
+                    oid: fwLSConnOverall
+                    num_oid: '.1.3.6.1.4.1.2620.1.1.30.1.{{ $index }}'
+                    index: 'fwLSConnOverall.{{ $index }}'
+                    descr: 'Log Server Connectivity'
+                    group: Logging
+                    value: fwLSConnOverall
+                    states:
+                        - {value: 0, descr: 'Ok', graph: '2', generic: 0}
+                        - {value: 1, descr: 'Warning', graph: '1', generic: 1}
+                        - {value: 2, descr: 'Error', graph: '0', generic: 2}
+                -
                     oid: fwLSConnState
                     num_oid: '.1.3.6.1.4.1.2620.1.1.30.3.1.3.{{ $index }}'
                     index: 'fwLSConnState.{{ $index }}'
