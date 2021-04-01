@@ -111,13 +111,25 @@ modules:
                     oid: fwLSConnState
                     num_oid: '.1.3.6.1.4.1.2620.1.1.30.3.1.3.{{ $index }}'
                     index: 'fwLSConnState.{{ $index }}'
-                    descr: '{{ $fwLSConnName }} - Log Server Connectivity'
+                    descr: '{{ $fwLSConnName }}, Log Server Connectivity'
                     group: Logging
                     value: fwLSConnState
                     states:
                         - {value: 0, descr: 'Ok', graph: '2', generic: 0}
                         - {value: 1, descr: 'Error', graph: '1', generic: 2}
                         - {value: 2, descr: 'Not Active', graph: '0', generic: 2}
+                -
+                    oid: fwLocalLoggingStat
+                    num_oid: '.1.3.6.1.4.1.2620.1.1.30.5.{{ $index }}'
+                    index: 'fwLocalLoggingStat.{{ $index }}'
+                    descr: 'Local Log Server Status'
+                    group: Logging
+                    value: fwLocalLoggingStat
+                    states:
+                        - {value: 0, descr: 'To log servers', graph: '3', generic: 0}
+                        - {value: 1, descr: 'Local configured', graph: '2', generic: 0}
+                        - {value: 2, descr: 'Local due to connectivity', graph: '1', generic: 2}
+                        - {value: 3, descr: 'Local due to high rate', graph: '0', generic: 2}
         temperature:
             data:
                 -
@@ -143,3 +155,35 @@ modules:
                     num_oid: '.1.3.6.1.4.1.2620.1.6.7.8.3.1.3.{{ $index }}'
                     descr: voltageSensorName
                     index: 'voltageSensorValue.{{ $index }}'
+        count:
+            data:
+                -
+                    oid: fwNumConn
+                    value: fwNumConn
+                    num_oid: '.1.3.6.1.4.1.2620.1.1.25.3.0'
+                    descr: 'Current Connections'
+                    index: 'fwNumConn'
+                -
+                    oid: fwAccepted
+                    value: fwAccepted
+                    num_oid: '.1.3.6.1.4.1.2620.1.1.4.0'
+                    descr: 'Accepted Packets'
+                    index: 'fwAccepted'
+                -
+                    oid: fwRejected
+                    value: fwRejected
+                    num_oid: '.1.3.6.1.4.1.2620.1.1.5.0'
+                    descr: 'Rejected Packets'
+                    index: 'fwRejected'
+                -
+                    oid: fwDropped
+                    value: fwDropped
+                    num_oid: '.1.3.6.1.4.1.2620.1.1.6.0'
+                    descr: 'Dropped Packets'
+                    index: 'fwDropped'
+                -
+                    oid: fwLogged
+                    value: fwLogged
+                    num_oid: '.1.3.6.1.4.1.2620.1.1.7.0'
+                    descr: 'Logged Packets'
+                    index: 'fwLogged'
