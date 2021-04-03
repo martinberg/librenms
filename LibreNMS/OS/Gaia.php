@@ -10,7 +10,24 @@ class Gaia extends \LibreNMS\OS implements OSPolling
     public function pollOS()
     {
         //#############
-        // Create lograte rrd
+        // Create firewall lograte/handlingrate rrd
+        //#############
+        $fw_lograte = snmp_get($this->getDeviceArray(), 'fwLoggingHandlingRate.0', '-OQv', 'CHECKPOINT-MIB');
+
+        if (is_numeric($fw_lograte)) {
+            $rrd_def = RrdDefinition::make()->addDataset('fwlograte', 'GAUGE', 0);
+
+            $fields = [
+                'fwlograte' => $fw_lograte,
+            ];
+
+            $tags = compact('rrd_def');
+            data_update($this->getDeviceArray(), 'gaia_fw_lograte', $tags, $fields);
+            $this->enableGraph('gaia_fw_lograte');
+        }
+
+        //#############
+        // Create MGMT logserver lograte rrd
         //#############
         $lograte = snmp_get($this->getDeviceArray(), 'mgLSLogReceiveRate.0', '-OQv', 'CHECKPOINT-MIB');
 

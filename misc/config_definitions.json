@@ -2339,7 +2339,15 @@
             },
             "type": "graph"
         },
-        "graph_types.device.gaia_lograte": {
+        "graph_types.device.gaia_logserver_lograte": {
+            "default": {
+                "section": "firewall",
+                "order": 0,
+                "descr": "Log Rate"
+            },
+            "type": "graph"
+        },
+        "graph_types.device.gaia_fw_lograte": {
             "default": {
                 "section": "firewall",
                 "order": 0,
