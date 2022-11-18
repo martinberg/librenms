@@ -8,7 +8,7 @@ modules:
                     value: Stulz-WIB8000-MIB::waterInTemperatu1ChillersPrimary
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.2.1.1.1191.{{ $index }}'
                     descr: 'Unit {{ $index }} Water In Primary Temperature'
-                    index: 'infoValWaterTable.{{ $index }}'
+                    index: 'waterInTemperatu1ChillersPrimary.{{ $index }}'
                     divisor: 10
                     group: Water Temperature
 
@@ -17,7 +17,7 @@ modules:
                     value: Stulz-WIB8000-MIB::waterInTemperatuhillersSecondary
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.2.1.1.1202.{{ $index }}'
                     descr: 'Unit {{ $index }} Water In Secondary Temperature'
-                    index: 'infoValWaterTable.{{ $index }}'
+                    index: 'waterInTemperatuhillersSecondary.{{ $index }}'
                     divisor: 10
                     group: Water Temperature
 
@@ -26,7 +26,7 @@ modules:
                     value: Stulz-WIB8000-MIB::waterOutTemperatChillersPrimary
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.2.1.1.1206.{{ $index }}'
                     descr: 'Unit {{ $index }} Water Out Primary Temperature'
-                    index: 'infoValWaterTable.{{ $index }}'
+                    index: 'waterOutTemperatChillersPrimary.{{ $index }}'
                     divisor: 10
                     group: Water Temperature
 
@@ -35,7 +35,7 @@ modules:
                     value: Stulz-WIB8000-MIB::waterOutTemperatillersSecondary
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.2.1.1.1207.{{ $index }}'
                     descr: 'Unit {{ $index }} Water Out Secondary Temperature'
-                    index: 'infoValWaterTable.{{ $index }}'
+                    index: 'waterOutTemperatillersSecondary.{{ $index }}'
                     divisor: 10
                     group: Water Temperature
 
@@ -44,7 +44,7 @@ modules:
                     value: Stulz-WIB8000-MIB::unitAirTemperature
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.1.1.1.1.1170.{{ $index }}'
                     descr: 'Unit {{ $index }} Air Temperature'
-                    index: 'infoValTemperatureTable.{{ $index }}'
+                    index: 'unitAirTemperature.{{ $index }}'
                     divisor: 10
                     group: Air Temperature
 
@@ -53,7 +53,7 @@ modules:
                     value: Stulz-WIB8000-MIB::unitReturnAirTemperature
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.1.1.1.1.1192.{{ $index }}'
                     descr: 'Unit {{ $index }} Return Air Temperature'
-                    index: 'infoValTemperatureTable.{{ $index }}'
+                    index: 'unitReturnAirTemperature.{{ $index }}'
                     divisor: 10
                     group: Air Temperature
 
@@ -62,7 +62,7 @@ modules:
                     value: Stulz-WIB8000-MIB::unitSupplyAirTemperature
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.1.1.1.1.1193.{{ $index }}'
                     descr: 'Unit {{ $index }} Supply Air Temperature'
-                    index: 'infoValTemperatureTable.{{ $index }}'
+                    index: 'unitSupplyAirTemperature.{{ $index }}'
                     divisor: 10
                     group: Air Temperature
 
@@ -71,7 +71,7 @@ modules:
                     value: Stulz-WIB8000-MIB::waterOutTemperatillersSecondary
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.2.1.1.1207.{{ $index }}'
                     descr: 'Unit {{ $index }} Water Out Secondary Temperature'
-                    index: 'infoValTemperatureTable.{{ $index }}'
+                    index: 'waterOutTemperatillersSecondary.{{ $index }}'
                     divisor: 10
                     group: Air Temperature
 
@@ -82,7 +82,7 @@ modules:
                     value: Stulz-WIB8000-MIB::unitSetpointHumidityCorrected
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.1.2.1.1.1178.{{ $index }}'
                     descr: 'Unit {{ $index }} Setpoint Humidity'
-                    index: 'infoValHumidityTable.{{ $index }}'
+                    index: 'unitSetpointHumidityCorrected.{{ $index }}'
                     divisor: 10
 
                 -
@@ -90,7 +90,7 @@ modules:
                     value: Stulz-WIB8000-MIB::unitReturnAirHumidity
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.1.2.1.1.1194.{{ $index }}'
                     descr: 'Unit {{ $index }} Return Air Humidity'
-                    index: 'infoValHumidityTable.{{ $index }}'
+                    index: 'unitReturnAirHumidity.{{ $index }}'
                     divisor: 10
 
                 -
@@ -98,7 +98,7 @@ modules:
                     value: Stulz-WIB8000-MIB::unitSupplyAirHumidity
                     num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.1.2.1.1.1195.{{ $index }}'
                     descr: 'Unit {{ $index }} Supply Air Humidity'
-                    index: 'infoValHumidityTable.{{ $index }}'
+                    index: 'unitSupplyAirHumidity.{{ $index }}'
                     divisor: 10
 
 
