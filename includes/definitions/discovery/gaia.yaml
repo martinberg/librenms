@@ -424,3 +424,10 @@ modules:
                     index: 'fwLoggingHandlingRate.{{ $index }}'
                     descr: 'Log Rate'
                     group: Logging
+                -
+                    oid: vsxStatusCPUUsage1min
+                    num_oid: '.1.3.6.1.4.1.2620.1.16.22.2.1.3.{{ $index }}'
+                    index: 'vsxStatusCPUUsage1min.{{ $index }}'
+                    descr: '{{ vsxStatusVsName }} - CPU Average'
+                    group: CPU
+
