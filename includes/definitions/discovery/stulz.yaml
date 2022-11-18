@@ -1,0 +1,12 @@
+mib: Stulz-WIB8000-MIB
+modules:
+    sensors:
+        temperature:
+            data:
+                -
+                    oid: Stulz-WIB8000-MIB::infoValWaterTable
+                    value: Stulz-WIB8000-MIB::waterInTemperatu1ChillersPrimary
+                    num_oid: '.1.3.6.1.4.1.29462.10.2.1.1.1.2.1.1.1191.{{ $index }}'
+                    descr: 'Water In Primary Temp'
+                    index: 'infoValWaterTable.{{ $index }}'
+                    group: Water Temperature
