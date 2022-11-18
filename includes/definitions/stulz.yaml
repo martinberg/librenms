@@ -1,0 +1,7 @@
+os: stulz
+text: 'Stulz WIB'
+type: environment
+icon: stulz
+discovery:
+    - sysObjectID:
+        - .1.3.6.1.4.1.29462.10.
