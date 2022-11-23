@@ -16,6 +16,16 @@ discovery_modules:
     processors: false
     services: false
     sensors: true
+    bgp-peers: false
+    cisco-vrf-lite: false
+    fdb-table: false
+    mpls: false
+    ntp: false
+    storage: false
+    stp: false
+    ucd-diskio: false
+    vlans: false
+    wireless: false
 poller_modules:
     applications: false
     availability: false
@@ -30,4 +40,9 @@ poller_modules:
     ports: true
     sensors: true
     stp: false
+    ucd-diskio: false
+    ucd-mib: false
+    bgp-peers: false
+    ipmi: false
+    ospf: false
 
