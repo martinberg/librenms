@@ -5,6 +5,9 @@ modules:
             data:
                 -
                     oid:
+                        -  unitTable
+                        -  unitsettingName
+                        -  Stulz-WIB8000-MIB::unitTable
                         -  Stulz-WIB8000-MIB::unitsettingName
         state:
             data:
